@@ -27,7 +27,6 @@ if (error) return  console.error(error);
 			string += i;
 		}
 	}
-	let max = list.length;
 	let temp = Object.assign({}, params);
 	let index = 0;
 	for (i of data) {
@@ -53,7 +52,7 @@ if (error) return  console.error(error);
 		}
 	}
 	json.splice(0, 1);
-	fs.writeFile('customer-data.json', JSON.stringify(json), function(error) {
+	fs.writeFile('customer-data.json', JSON.stringify(json, null, 4), function(error) {
 		if (error) return console.erro(error);
 		console.log('writing is done');
 	});
