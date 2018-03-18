@@ -52,7 +52,7 @@ if (error) return  console.error(error);
 		}
 	}
 	json.splice(0, 1);
-	fs.writeFile('customer-data.json', JSON.stringify(json, null, 4), function(error) {
+	fs.writeFile('customer-data.json', JSON.stringify(json, null, 2), function(error) {
 		if (error) return console.erro(error);
 		console.log('writing is done');
 	});
